@@ -3,7 +3,7 @@
 ![Log1](https://raw.githubusercontent.com/zenzou7/loggers-gzip-y-analisis-de-performance/main/capturas/log1winston.png)
 ![Log2](https://raw.githubusercontent.com/zenzou7/loggers-gzip-y-analisis-de-performance/main/capturas/log2winston.png)
 
-## Sumary de artilery
+## Sumary de artillery
 
 ![captura de artillery](https://raw.githubusercontent.com/zenzou7/loggers-gzip-y-analisis-de-performance/main/capturas/artillery.png)
 
