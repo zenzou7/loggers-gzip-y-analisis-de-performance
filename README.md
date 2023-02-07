@@ -5,7 +5,7 @@
 
 ## Sumary de artilery
 
-![captura de artillery](https://raw.githubusercontent.com/parzibyte/WaterPy/main/capturas/artillery.png)
+![captura de artillery](https://raw.githubusercontent.com/zenzou7/loggers-gzip-y-analisis-de-performance/main/capturas/artillery.png)
 
 ## Sumary de node --prof
 
