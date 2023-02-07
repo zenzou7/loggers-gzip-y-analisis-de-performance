@@ -1,0 +1,47 @@
+Statistical profiling result from nobloq-v8.log, (137494 ticks, 1 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  136560   99.3%          C:\Windows\SYSTEM32\ntdll.dll
+    890    0.6%          D:\NodeJS\node.exe
+     20    0.0%          C:\Windows\System32\KERNELBASE.dll
+     10    0.0%          C:\Windows\System32\KERNEL32.DLL
+      1    0.0%          C:\Windows\System32\WS2_32.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.0%    7.7%  LazyCompile: *trim_prefix C:\Users\Leona\OneDrive\Escritorio\Loggers y gzip\node_modules\express\lib\router\index.js:293:23
+      1    0.0%    7.7%  LazyCompile: *onwrite node:internal/streams/writable:428:17
+      1    0.0%    7.7%  LazyCompile: *nextTick node:internal/process/task_queues:103:18
+      1    0.0%    7.7%  LazyCompile: *get node:internal/bootstrap/node:95:8
+      1    0.0%    7.7%  LazyCompile: *emit node:events:460:44
+      1    0.0%    7.7%  LazyCompile: *deserializeObject C:\Users\Leona\OneDrive\Escritorio\Loggers y gzip\node_modules\bson\lib\parser\deserializer.js:65:27
+      1    0.0%    7.7%  Function: ^listOnTimeout node:internal/timers:512:25
+      1    0.0%    7.7%  Function: ^getBooleanOption C:\Users\Leona\OneDrive\Escritorio\Loggers y gzip\node_modules\safe-stable-stringify\index.js:152:27
+      1    0.0%    7.7%  Function: ^equals C:\Users\Leona\OneDrive\Escritorio\Loggers y gzip\node_modules\mongodb\lib\sdam\server_description.js:95:11
+      1    0.0%    7.7%  Function: ^command C:\Users\Leona\OneDrive\Escritorio\Loggers y gzip\node_modules\mongodb\lib\cmap\connection.js:274:12
+      1    0.0%    7.7%  Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      1    0.0%    7.7%  Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     12    0.0%   92.3%  JavaScript
+      0    0.0%    0.0%  C++
+     27    0.0%  207.7%  GC
+  137481  100.0%          Shared libraries
+      1    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  136560   99.3%  C:\Windows\SYSTEM32\ntdll.dll
+
