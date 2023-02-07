@@ -132,15 +132,28 @@ const getInfo = (req, res) => {
 const getRandoms = (req, res) => {
   logger.log('info', 'Get en /api/randoms- log info');
 
-  let cantidad = req.query.cant || 100000;
+  let msg = 0;
+  req.query.hasOwnProperty('cant') ? (msg = parseInt(req.query.cant)) : (msg = 10000);
 
-  let proceso = fork('./calculo.js');
+  let arrayRandomNum = [];
+  let arrayUsedNumber = [];
+  let arrayRepeatedResult = [];
+  for (let i = 0; i < msg; i++) {
+    arrayRandomNum.push(Math.floor(Math.random() * 1000) + 1);
+  }
 
-  proceso.send({ cantidad });
+  arrayRandomNum.forEach((num) => {
+    if (!arrayUsedNumber.includes(num)) {
+      arrayUsedNumber.push(num);
+      arrayRepeatedResult.push({
+        [num]: arrayRandomNum.filter((repeatedNum) => repeatedNum == num).length,
+      });
+    }
+  });
 
-  proceso.on('message', (msg) => {
-    const { data } = msg;
-    res.json(data);
+  res.json({
+    Numeros_generados: 'Usted ha generado ' + msg + ' números. Estos, agrupados por repetición, generaron un array de ' + arrayRepeatedResult.length + ' elementos',
+    numeros: arrayRepeatedResult,
   });
 };
 
